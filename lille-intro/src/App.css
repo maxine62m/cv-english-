@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; background: #000; color: #eee; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.app { display: flex; flex-direction: column; height: 100%; }
+.frame { position: relative; flex: 1; overflow: hidden; background: #000; }
+.stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: center; }
+.app.export .frame { flex: none; width: 1920px; height: 1080px; }
+.app.export .stage { left: 0; top: 0; transform: none !important; }
+.cesium, .overlay { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+.overlay { pointer-events: none; }
+.cesium .cesium-widget, .cesium .cesium-viewer { width: 100%; height: 100%; }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; font-size: 36px; letter-spacing: 4px; color: #e8c79c; background: #000; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 14px; background: #0d0f14; border-top: 1px solid #222; font-size: 14px; }
+.controls button, .controls select { background: #1d2230; color: #eee; border: 1px solid #343b4f; border-radius: 6px; padding: 7px 12px; cursor: pointer; font-size: 14px; }
+.controls button:disabled { opacity: 0.45; cursor: default; }
+.controls button.primary { background: #c9792f; border-color: #e09a52; color: #fff; font-weight: 600; }
+.controls input[type='range'] { flex: 1; min-width: 200px; accent-color: #e09a52; }
+.time { font-variant-numeric: tabular-nums; min-width: 120px; }
+.busy { color: #f0b46c; font-weight: 600; }
+.mode { opacity: 0.75; font-size: 12px; }
+.mode.google, .mode.ion-google { color: #9fe39f; }
+.warn { color: #ff9b7a; font-size: 12px; flex-basis: 100%; }
